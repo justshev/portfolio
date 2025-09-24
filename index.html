@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>@justshev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f5f8ff",
+                100: "#eaefff",
+                200: "#d9e3ff",
+                300: "#b9caff",
+                400: "#8da6ff",
+                500: "#5c7fff",
+                600: "#3e63f5",
+                700: "#2f4dd6",
+                800: "#273da8",
+                900: "#223587",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .aos {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: opacity, transform;
+      }
+      .aos.in-view {
+        opacity: 1;
+        transform: none;
+      }
+      .aos[data-animate="fade-in"] {
+        transform: none;
+      }
+      .aos[data-animate="fade-left"] {
+        transform: translateX(16px);
+      }
+      .aos[data-animate="fade-right"] {
+        transform: translateX(-16px);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .aos {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="relative bg-white text-gray-800 antialiased selection:bg-brand-200 selection:text-brand-900 dark:bg-gray-950 dark:text-gray-100"
+  >
+    <!-- Background Grid + Gradient -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.08),transparent_50%)]"
+      ></div>
+      <div
+        class="absolute inset-0 bg-[linear-gradient(transparent,transparent_60%,rgba(0,0,0,0.04))] dark:bg-[linear-gradient(transparent,transparent_60%,rgba(255,255,255,0.06))]"
+      ></div>
+      <div
+        class="absolute inset-0 [background-image:linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] dark:[background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]"
+      ></div>
+    </div>
+
+    <header class="relative">
+      <div class="max-w-5xl mx-auto px-6 py-14 sm:py-20">
+        <div
+          class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6"
+        >
+          <div>
+            <h1
+              class="text-3xl sm:text-5xl font-bold tracking-tight"
+              data-animate="fade-up"
+              data-delay="0"
+            >
+              Muhammad Sheva
+            </h1>
+            <p
+              class="mt-3 text-base sm:text-lg text-gray-600 dark:text-gray-300"
+              data-animate="fade-up"
+              data-delay="100"
+            >
+              An guy who loves solving problems by building innovative products.
+            </p>
+          </div>
+          <img
+            class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl ring-1 ring-black/10 object-cover"
+            src="profile.png"
+            alt="Foto Profil"
+            data-animate="fade-left"
+            data-delay="150"
+          />
+        </div>
+        <div
+          class="mt-4 flex items-center gap-3"
+          data-animate="fade-up"
+          data-delay="150"
+        >
+          <a
+            href="https://www.linkedin.com/in/muhammadsheva"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm hover:shadow-md hover:border-brand-200 transition dark:bg-gray-900 dark:border-gray-800"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-5 w-5 text-[#0A66C2]"
+              fill="currentColor"
+            >
+              <path
+                d="M20.447 20.452H17.21V14.86c0-1.332-.027-3.047-1.858-3.047-1.86 0-2.145 1.45-2.145 2.95v5.689H9.07V9h3.104v1.561h.045c.433-.82 1.492-1.685 3.07-1.685 3.287 0 3.893 2.164 3.893 4.98v6.596zM5.337 7.433a1.803 1.803 0 1 1 0-3.606 1.803 1.803 0 0 1 0 3.606zM6.96 20.452H3.71V9h3.25v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/mshevaatallah"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm hover:shadow-md hover:border-brand-200 transition dark:bg-gray-900 dark:border-gray-800"
+            aria-label="GitHub"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-5 w-5 text-gray-900 dark:text-gray-100"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.59 2 12.253c0 4.52 2.865 8.35 6.839 9.707.5.095.682-.219.682-.486 0-.24-.009-.876-.014-1.719-2.782.615-3.369-1.355-3.369-1.355-.454-1.172-1.11-1.485-1.11-1.485-.907-.636.069-.623.069-.623 1.003.072 1.53 1.05 1.53 1.05.892 1.561 2.341 1.11 2.91.848.091-.662.35-1.11.636-1.366-2.221-.257-4.555-1.135-4.555-5.051 0-1.116.39-2.028 1.03-2.744-.104-.258-.447-1.296.098-2.703 0 0 .84-.27 2.75 1.048A9.38 9.38 0 0 1 12 7.51a9.38 9.38 0 0 1 2.503.343c1.909-1.318 2.748-1.048 2.748-1.048.546 1.407.203 2.445.1 2.703.64.716 1.028 1.628 1.028 2.744 0 3.926-2.338 4.792-4.566 5.045.359.317.678.942.678 1.897 0 1.37-.013 2.474-.013 2.811 0 .269.18.584.688.485A10.01 10.01 0 0 0 22 12.253C22 6.59 17.523 2 12 2Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <a
+            href="mailto:mshevaatallah@gmail.com"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm hover:shadow-md hover:border-brand-200 transition dark:bg-gray-900 dark:border-gray-800"
+            aria-label="Email"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-5 w-5 text-brand-600"
+              fill="currentColor"
+            >
+              <path
+                d="M1.5 6.75A2.25 2.25 0 0 1 3.75 4.5h16.5A2.25 2.25 0 0 1 22.5 6.75v10.5A2.25 2.25 0 0 1 20.25 19.5H3.75A2.25 2.25 0 0 1 1.5 17.25V6.75Zm2.66-.75a.75.75 0 0 0-.41 1.39l7.25 4.83a.75.75 0 0 0 .82 0l7.25-4.83a.75.75 0 1 0-.82-1.27L12 10.74 4.57 6.12a.75.75 0 0 0-.41-.12Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 pb-16 space-y-12">
+      <!-- Tentang -->
+      <section
+        class="grid gap-4 p-6 rounded-2xl bg-white/70 backdrop-blur border border-gray-200 shadow-sm dark:bg-gray-900/60 dark:border-gray-800"
+        data-animate="fade-up"
+        data-delay="0"
+      >
+        <h2 class="text-xl sm:text-2xl font-semibold">More about me</h2>
+        <p class="text-gray-700 leading-relaxed dark:text-gray-300">
+          👋 Hi! I’m Muhammad Sheva, 19 years old and currently studying
+          Information Systems at Telkom University Jakarta. 💡 I’m a curious
+          person who loves learning new things and exploring how technology can
+          solve real problems. I enjoy taking the initiative and working on
+          projects where I can grow and make an impact.
+        </p>
+      </section>
+
+      <!-- Pengalaman Kerja -->
+      <section class="grid gap-5">
+        <div
+          class="flex items-center justify-between"
+          data-animate="fade-up"
+          data-delay="0"
+        >
+          <h2 class="text-xl sm:text-2xl font-semibold">Experience</h2>
+          <span class="text-2xl" aria-hidden="true">💼</span>
+        </div>
+        <ol class="grid gap-4">
+          <li
+            class="p-5 rounded-xl border border-gray-200 bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800"
+            data-animate="fade-up"
+            data-delay="0"
+          >
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-semibold">
+                Founder & Project Manager - Nirmalabs
+              </h3>
+              <span class="text-xs text-gray-500">June 2025 - Present</span>
+            </div>
+
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              Founder and Project Manager, leading product development and
+              ensuring successful execution from concept to completion.
+            </p>
+            <ul
+              class="mt-3 list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1"
+            >
+              <li>
+                Wello – Developed a health and lifestyle planning application
+                with features for meal planning, workout scheduling, mental
+                health journaling, and social sharing.
+              </li>
+              <li>
+                Quico – Built an interactive quiz application designed to
+                enhance engagement through gamified question-and-answer modes.
+              </li>
+              <li>
+                Mogi – Created an IoT and AI-integrated mushroom incubation
+                system with a companion app for real-time monitoring and
+                predictive analysis.
+              </li>
+              <li>
+                DCS Website – Developed a Sustainable Development Goals (SDG)
+                website for Telkom University with key features including voice
+                interaction, an integrated chatbot, and accessibility support
+              </li>
+            </ul>
+          </li>
+          <li
+            class="p-5 rounded-xl border border-gray-200 bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800"
+            data-animate="fade-up"
+            data-delay="100"
+          >
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-semibold">
+                Research and Development - AILO Telkom University
+              </h3>
+              <span class="text-xs text-gray-500">February 2025 - Present</span>
+            </div>
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              Built multiple web applications and systems for Telkom University,
+              focusing on usability, scalability, and institutional needs.
+            </p>
+            <ul
+              class="mt-3 list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1"
+            >
+              <li>
+                Developed an AI-powered chatbot for Telkom University’s official
+                website to enhance user interaction and information
+                accessibility.
+              </li>
+              <li>
+                Maintained and improved the Telkom Education Foundation
+                dashboard, optimizing system performance and providing better
+                insights for decision-making.
+              </li>
+            </ul>
+          </li>
+          <li
+            class="p-5 rounded-xl border border-gray-200 bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800"
+            data-animate="fade-up"
+            data-delay="200"
+          >
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-semibold">
+                Fullstack Developer — PT Binawan Inti Teknologi
+              </h3>
+              <span class="text-xs text-gray-500"
+                >December 2022 - February 2023</span
+              >
+            </div>
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              Developed a job portal platform using Flutter (mobile) and React
+              (web), enabling seamless job postings, applications, and user
+              management. Implemented responsive UI/UX and integrated backend
+              APIs to ensure a smooth and scalable experience for both employers
+              and job seekers.
+            </p>
+            <ul
+              class="mt-3 list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1"
+            >
+              <li>
+                Developed a job portal platform using Flutter (mobile) and React
+                (web), enabling seamless job postings, applications, and user
+                management.
+              </li>
+              <li>
+                Developed an integrated campus system for Binawan University to
+                support academic and administrative processes.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+      <!-- Projects -->
+      <section class="grid gap-5">
+        <div
+          class="flex items-center justify-between"
+          data-animate="fade-up"
+          data-delay="0"
+        >
+          <h2 class="text-xl sm:text-2xl font-semibold">Works</h2>
+          <span class="text-2xl" aria-hidden="true">✨</span>
+        </div>
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <li
+            class="group p-5 rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md hover:border-brand-200 transition-all dark:bg-gray-900 dark:border-gray-800"
+            data-animate="fade-up"
+            data-delay="0"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div class="text-2xl" aria-hidden="true">🌱</div>
+              <a
+                href="#"
+                class="text-sm text-brand-700 hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-300"
+                >Demo</a
+              >
+            </div>
+            <h3 class="mt-2 font-semibold">Mogi : Modern Agriculture</h3>
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              IoT and AI-integrated mushroom incubation system with a companion
+              app for real-time monitoring and predictive analysis.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs text-gray-500">
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >React Native</span
+              >
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >Django</span
+              >
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >Supabase</span
+              >
+            </div>
+          </li>
+          <li
+            class="group p-5 rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md hover:border-brand-200 transition-all dark:bg-gray-900 dark:border-gray-800"
+            data-animate="fade-up"
+            data-delay="100"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div class="text-2xl" aria-hidden="true">🤖</div>
+              <a
+                href="#"
+                class="text-sm text-brand-700 hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-300"
+                >Demo</a
+              >
+            </div>
+            <h3 class="mt-2 font-semibold">Chatbot Telkom University</h3>
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              Chatbot with natural language processing to assist students and
+              faculty.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs text-gray-500">
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >Django</span
+              >
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >Railway</span
+              >
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >Gemini LLM</span
+              >
+            </div>
+          </li>
+          <li
+            class="group p-5 rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md hover:border-brand-200 transition-all dark:bg-gray-900 dark:border-gray-800"
+            data-animate="fade-up"
+            data-delay="200"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div class="text-2xl" aria-hidden="true">🌎</div>
+              <a
+                href="#"
+                class="text-sm text-brand-700 hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-300"
+                >Demo</a
+              >
+            </div>
+            <h3 class="mt-2 font-semibold">SDG Website Telkom University</h3>
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              Sustainable Development Goals (SDG) website for Telkom University
+              with key features including voice interaction, an integrated
+              chatbot, and accessibility support
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs text-gray-500">
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >Next JS</span
+              >
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >Gemini LLM</span
+              >
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >Django</span
+              >
+              <span class="rounded-full bg-gray-100 px-2 py-1 dark:bg-gray-800"
+                >Sanity</span
+              >
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Pencapaian / Achievements -->
+      <section class="grid gap-5">
+        <div
+          class="flex items-center justify-between"
+          data-animate="fade-up"
+          data-delay="0"
+        >
+          <h2 class="text-xl sm:text-2xl font-semibold">Achievements</h2>
+          <span class="text-2xl" aria-hidden="true">🏆</span>
+        </div>
+        <ul class="grid gap-4">
+          <li
+            class="p-5 rounded-xl border border-blue-200 bg-blue-50 text-blue-800 shadow-sm dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-200"
+            data-animate="fade-up"
+            data-delay="0"
+          >
+            <div class="flex items-baseline justify-between gap-2">
+              <span class="font-medium">3rd UI/UX Competition</span>
+              <span class="text-xs opacity-80">
+                SITE FEST by Primakara University</span
+              >
+            </div>
+            <p class="mt-1 text-sm opacity-90">
+              Achieved 3rd place in the National UI/UX Competition by designing
+              Wello, a mobile application for healthy living that offers meal
+              planning, nutritious recipes, and personalized workout schedules.
+            </p>
+          </li>
+          <li
+            class="p-5 rounded-xl border border-green-200 bg-green-50 text-green-800 shadow-sm dark:border-green-900/40 dark:bg-green-950/40 dark:text-green-200"
+            data-animate="fade-up"
+            data-delay="100"
+          >
+            <div class="flex items-baseline justify-between gap-2">
+              <span class="font-medium">
+                2nd Place Winner – Website Development Competition</span
+              >
+              <span class="text-xs opacity-80"
+                >Universitas Negeri jakarta
+              </span>
+            </div>
+            <p class="mt-1 text-sm opacity-90">
+              Awarded 2nd place in a Website Development Competition for
+              building an interactive learning platform using React and
+              Firebase, providing users with engaging educational content and
+              real-time data management.
+            </p>
+          </li>
+          <li
+            class="p-5 rounded-xl border border-blue-200 bg-blue-50 text-blue-800 shadow-sm dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-200"
+            data-animate="fade-up"
+            data-delay="200"
+          >
+            <div class="flex items-baseline justify-between gap-2">
+              <span class="font-medium"
+                >Third Place Winner – Cloud Computing Competition (Regional DKI
+                Jakarta)</span
+              >
+              <span class="text-xs opacity-80"> Amazon Web Services</span>
+            </div>
+            <p class="mt-1 text-sm opacity-90">
+              Developed a virtual museum on Indonesia’s independence history for
+              the Cloud Computing Competition – Regional DKI Jakarta.
+            </p>
+          </li>
+          <li
+            class="p-5 rounded-xl border border-blue-200 bg-blue-50 text-blue-800 shadow-sm dark:border-blue-900/40 dark:bg-blue-950/40 dark:text-blue-200"
+            data-animate="fade-up"
+            data-delay="300"
+          >
+            <div class="flex items-baseline justify-between gap-2">
+              <span class="font-medium"
+                >2nd Runner Up– Cloud Computing Competition (Regional DKI
+                Jakarta)</span
+              >
+              <span class="text-xs opacity-80"> Amazon Web Services</span>
+            </div>
+            <p class="mt-1 text-sm opacity-90">
+              Built a cloud-powered website displaying the evolution of
+              technology across the world, submitted to the Cloud Computing
+              Competition – Regional DKI Jakarta
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="border-t border-gray-200 dark:border-gray-800">
+      <div
+        class="max-w-5xl mx-auto px-6 py-8 text-sm text-gray-600 dark:text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-3"
+      >
+        <p>&copy;justshev</p>
+        <div class="flex items-center gap-4"></div>
+      </div>
+    </footer>
+    <script>
+      (() => {
+        const reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+        const els = document.querySelectorAll("[data-animate]");
+        els.forEach((el) => {
+          el.classList.add("aos");
+          const d = el.dataset.delay ? parseInt(el.dataset.delay, 10) : 0;
+          if (!Number.isNaN(d) && d > 0) el.style.transitionDelay = d + "ms";
+        });
+        if (reduce) {
+          els.forEach((el) => el.classList.add("in-view"));
+          return;
+        }
+        const io = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                if (entry.target.dataset.once !== "false")
+                  obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -10% 0px" }
+        );
+        els.forEach((el) => io.observe(el));
+      })();
+    </script>
+  </body>
+</html>
